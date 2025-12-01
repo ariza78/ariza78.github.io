@@ -116,3 +116,339 @@
 
         .hero-badge span {
             width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background-color: #22c55e;
+            margin-right: 6px;
+        }
+
+        .hero-actions {
+            margin-top: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #111827;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #f97316;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(249, 250, 251, 0.7);
+            color: #e5e7eb;
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(15, 23, 42, 0.25);
+        }
+
+        .hero-meta {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .hero-side {
+            background-color: rgba(15, 23, 42, 0.26);
+            border-radius: 14px;
+            padding: 16px 14px;
+            font-size: 13px;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            color: #d1d5db;
+        }
+
+        .stat-value {
+            font-weight: 600;
+        }
+
+        /* Bölüm başlıkları */
+
+        h2.section-title {
+            font-size: 20px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        h2.section-title::before {
+            content: "";
+            width: 5px;
+            height: 20px;
+            border-radius: 999px;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            margin-right: 8px;
+        }
+
+        .section-intro {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            max-width: 640px;
+        }
+
+        /* Kart ızgaraları */
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background-color: var(--bg-light);
+            border-radius: 12px;
+            padding: 16px 18px;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .card h3 {
+            margin: 0 0 6px;
+            font-size: 16px;
+            color: var(--primary-dark);
+        }
+
+        .card p {
+            margin: 0 0 8px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .card ul {
+            padding-left: 18px;
+            margin: 6px 0 0;
+            font-size: 13px;
+        }
+
+        /* Diğer bölümler */
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        .contact p {
+            margin: 4px 0;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-subtle);
+            padding: 14px 0 18px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+            background-color: #ffffff;
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Mobil uyum */
+
+        @media (max-width: 720px) {
+            .hero {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            nav {
+                display: none; /* İlk etapta mobilde menüyü gizli tutalım; karmaşıklaştırmaya gerek yok */
+            }
+
+            .container {
+                padding: 18px 14px 32px;
+            }
+
+            .hero {
+                padding: 24px 18px 22px;
+            }
+
+            .hero-main h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-wrap">
+        <div class="brand">Trakya <span>Mühendislik</span></div>
+        <nav>
+            <a href="#hizmetler">Hizmetler</a>
+            <a href="#sektorler">Sektörler</a>
+            <a href="#surec">Çalışma Süreci</a>
+            <a href="#iletisim">İletişim</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-main">
+            <div class="hero-badge">
+                <span></span> 3D Tarama • Tersine Mühendislik • Mekanik Tasarım
+            </div>
+            <h1>Parçalarınızı dijital ortama<strong> mühendislik hassasiyetinde</strong> taşıyoruz.</h1>
+            <p>
+                Trakya Mühendislik, kalıpçılık, makine, döküm ve medikal sektörlerinde
+                3D tarama, CAD modelleme ve imalata hazır teknik resimler alanında
+                hızlı ve güvenilir çözümler sunar.
+            </p>
+            <div class="hero-actions">
+                <a href="#iletisim" class="btn btn-primary">Teklif / Bilgi Al</a>
+                <a href="#hizmetler" class="btn btn-outline">Hizmetlerimizi incele</a>
+            </div>
+            <div class="hero-meta">
+                STL, STEP, IGES, PDF formatlarında teslim • Hassas tarama ve üretilebilir tasarım odağı
+            </div>
+        </div>
+
+        <aside class="hero-side">
+            <div class="stat-row">
+                <span class="stat-label">Konum</span>
+                <span class="stat-value">Tekirdağ / Çorlu</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Odak alanları</span>
+                <span class="stat-value">3D Tarama, Tersine Mühendislik, Sac & Tank Tasarımı</span>
+            </div>
+            <hr style="border: none; border-top: 1px solid rgba(148,163,184,0.4); margin: 10px 0;">
+            <p style="margin: 0; color: #e5e7eb; font-size: 12px;">
+                Projenizle ilgili çizim, numune veya teknik şartname varsa e-posta ile paylaşabilirsiniz.
+                Uygun format ve teslim süresi birlikte netleştirilir.
+            </p>
+        </aside>
+    </section>
+
+    <!-- HİZMETLER -->
+    <section id="hizmetler">
+        <h2 class="section-title">Hizmetler</h2>
+        <p class="section-intro">
+            3D tarama datasından başlayarak, üretilebilir CAD model, imalat ve montaj resimleri
+            ile süreci uçtan uca yönetebiliyoruz.
+        </p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>3D Tarama & Nokta Bulutu</h3>
+                <p>Mevcut parça ve kalıplarınızın geometrisini yüksek hassasiyetle dijital ortama taşıyoruz.</p>
+                <ul>
+                    <li>Yüksek çözünürlüklü 3D tarama</li>
+                    <li>STL / OBJ formatlarında mesh veri</li>
+                    <li>Kalite kontrol için referans veri setleri</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Tersine Mühendislik</h3>
+                <p>Tarama datasından üretilebilir, parametrik CAD model oluşturuyoruz.</p>
+                <ul>
+                    <li>SolidWorks ile yüzey ve katı modelleme</li>
+                    <li>STL’den STEP / IGES formatına dönüşüm</li>
+                    <li>Geometri iyileştirme ve revizyon uygulama</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Mekanik Tasarım & Teknik Resimler</h3>
+                <p>Tank, şase, sac parçalar ve özel makineler için imalata uygun tasarım ve çizim.</p>
+                <ul>
+                    <li>İmalat ve montaj resimleri (2D)</li>
+                    <li>Patlatılmış görünüş ve parça listeleri</li>
+                    <li>Şantiyeye/montaja uygun resim setleri</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Prototip & Revizyon Çalışmaları</h3>
+                <p>Mevcut ürünlerinizde revizyon veya yeni ürün geliştirme süreçlerinde destek.</p>
+                <ul>
+                    <li>3D baskı için model hazırlama</li>
+                    <li>Revizyonlu tasarım ve dokümantasyon</li>
+                    <li>Deneme üretimleri için teknik destek</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEKTÖRLER -->
+    <section id="sektorler">
+        <h2 class="section-title">Çalıştığımız Sektörler</h2>
+        <p class="section-intro">
+            Ağırlıklı olarak küçük ve orta ölçekli imalatçılarla çalışıyor; hızlı geri dönüş ve sahadaki
+            gerçek problemlere odaklanıyoruz.
+        </p>
+        <ul>
+            <li>Kalıpçılık ve döküm sanayi</li>
+            <li>Makine ve proses ekipmanları üreticileri</li>
+            <li>Medikal ekipman ve cihaz üreticileri</li>
+            <li>Ar-Ge, prototip ve ürün geliştirme ekipleri</li>
+        </ul>
+    </section>
+
+    <!-- ÇALIŞMA SÜRECİ -->
+    <section id="surec">
+        <h2 class="section-title">Çalışma Süreci</h2>
+        <p class="section-intro">
+            Süreci net ve izlenebilir tutmak için her projede aşağıdaki adımları takip ediyoruz.
+        </p>
+        <ol>
+            <li>Parça / proje bilgileri ve beklentilerin netleştirilmesi</li>
+            <li>3D tarama veya mevcut datanın alınması ve kontrolü</li>
+            <li>CAD modelleme ve imalat resimlerinin hazırlanması</li>
+            <li>Geri bildirim ve revizyonların işlenmesi</li>
+            <li>Son dosyaların teslimi (STEP, IGES, STL, PDF vb.)</li>
+        </ol>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section id="iletisim" class="contact">
+        <h2 class="section-title">İletişim</h2>
+        <p class="section-intro">
+            Projenizle ilgili çizim, numune fotoğrafı veya teknik şartnameyi e-posta ile iletebilir,
+            detayları telefonla netleştirebilirsiniz.
+        </p>
+        <p><strong>E-posta:</strong> <a href="mailto:ali.riza.uygun@gmail.com">ali.riza.uygun@gmail.com</a></p>
+        <p><strong>Telefon:</strong> 0538 873 60 54</p>
+        <p><strong>Konum:</strong> Tekirdağ / Çorlu</p>
+    </section>
+</main>
+
+<footer>
+    © 2025 Trakya Mühendislik. Tüm hakları saklıdır.
+</footer>
+
+</body>
+</html>
